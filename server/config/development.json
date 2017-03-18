@@ -1,0 +1,8 @@
+{
+    "port": 1337,
+    "host": "localhost",
+    "version": "0",
+    "mongoDb": {
+        "uri": "mongodb://nobody:abc123@ds019940.mlab.com:19940/rectangles"
+    }
+}

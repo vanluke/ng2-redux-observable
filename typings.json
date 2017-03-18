@@ -1,0 +1,11 @@
+{
+  "globalDependencies": {
+    "assertion-error": "registry:dt/assertion-error#1.0.0+20160316155526",
+    "jasmine": "registry:dt/jasmine#2.2.0+20160505161446",
+    "node": "registry:dt/node#6.0.0+20160514165920",
+    "selenium-webdriver": "registry:dt/selenium-webdriver#2.44.0+20160317120654",
+    "source-map": "registry:dt/source-map#0.0.0+20160317120654",
+    "uglify-js": "registry:dt/uglify-js#2.6.1+20160316155526",
+    "webpack": "registry:dt/webpack#1.12.9+20160321060707"
+  }
+}
