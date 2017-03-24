@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+@mixin font-main {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  @include font-main();
+}

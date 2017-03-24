@@ -3,7 +3,7 @@ import { IPost } from './post';
 
 @Component({
   selector: 'post',
-  template: `<a class="c-post" routerLink="{{ post.id }}">
+  template: `<a class="c-posts__link" [routerLink]="['./', post.id]">
     {{ post.title }}
   </a>
 `,

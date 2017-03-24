@@ -1,0 +1,16 @@
+$header-main-color: #4aadff;
+$body-color: #333333;
+.c-post-details {
+  padding: .7rem;
+  margin: 0 auto;
+  &__header {
+    &--main {
+      font-size: 130%;
+      color: $header-main-color;
+    }
+  }
+  &__body {
+    padding: .7rem;
+    color: $body-color;
+  }
+}

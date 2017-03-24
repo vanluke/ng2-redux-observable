@@ -1,0 +1,74 @@
+@import "../common";
+
+$dialog-bg-color: #fff;
+$overlay-bg-color: rgba(0, 0, 0, .5);
+$create-btn-color: #2a73fb;
+$create-btn-background: #fff;
+.c-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $overlay-bg-color;
+  z-index: $overlay-zindex;
+}
+
+.c-dialog {
+  z-index: $dialog-zindex;
+  position: fixed;
+  right: 1rem;
+  left: 1rem;
+  top: 50%;
+  margin-top: -14rem;
+  margin-right: auto;
+  margin-left: auto;
+  min-height: 14rem;
+  width: 80%;
+  max-width: 90%;
+  background-color: $dialog-bg-color;
+  padding: .7rem;
+  box-shadow: 0 .4rem .45rem -.45rem rgba(0, 0, 0, .2), 0 .8rem 1.2px .125rem rgba(0, 0, 0, .14), 0 .321rem 2rem .25rem rgba(0, 0, 0, .12);
+  &__close {
+    position: absolute;
+    right: 0;
+    margin-right: 2rem;
+  }
+
+  &__close_button {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border:none;
+    background: none;
+    outline: none;
+    border-radius: 1rem;
+    &::after, &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 2rem;
+      height: .125rem;
+      box-shadow: .4rem .3rem #000;
+
+    }
+    &::before {
+      left: .7rem;
+      top: 0;
+      transform: rotate(45deg);
+    }
+    &::after {
+      top: .55rem;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__button {
+    padding: 1rem;
+    border: none;
+    &--create {
+      background: $create-btn-background;
+      border-bottom: .4rem solid $create-btn-color;
+    }
+  }
+}

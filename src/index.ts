@@ -6,6 +6,7 @@ import 'zone.js/dist/zone';
 import 'zone.js/dist/long-stack-trace-zone';
 import 'ts-helpers';
 import './bootstrap';
+import './main.scss';
 
 declare const production: boolean;
 declare const test: boolean;

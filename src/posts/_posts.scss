@@ -1,0 +1,40 @@
+$header-main-color: #4aadff;
+$link-color: #349ee5;
+$link-color-hover: #000cff;
+$create-btn-color: #2a73fb;
+$create-btn-background: #2a73fb;
+$create-btn-bb: #0756ea;
+$btn-color: #fff;
+.c-posts {
+  &__header {
+    &--main {
+      font-size: 130%;
+      color: $header-main-color;
+    }
+  }
+  &--inline {
+    display: inline;
+  }
+  &__link {
+    padding: .5rem;
+    color: $link-color;
+    text-decoration: none;
+    line-height: 130%;
+    transition: color .3s ease;
+    &:hover {
+      color: $link-color-hover;
+    }
+  }
+  &__button {
+    padding: 1rem;
+    border: none;
+    &--create {
+      font-size: 90%;
+      position: fixed;
+      right: 0;
+      color: $btn-color;
+      background: $create-btn-background;
+      border-bottom: .2rem solid $create-btn-bb;
+    }
+  }
+}

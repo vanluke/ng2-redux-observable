@@ -2,6 +2,10 @@ import {
   FETCH_POSTS,
   FETCH_POSTS_SUCCESS,
   FETCH_POSTS_FAILED,
+  NEW_POST_TITLE_CHANGED,
+  NEW_POST_BODY_CHANGED,
+  NEW_POST_DIALOG_TOGGLE,
+  NEW_POST_CREATE,
 } from './posts-consts';
 import { IPost } from './post';
 import { Observable } from 'rxjs';
@@ -33,6 +37,36 @@ export const itemsFetchPostsFailed = (error): IAction => ({
     error
   },
 });
+
+export const newPostTitleChanged = title => ({
+  type: NEW_POST_TITLE_CHANGED,
+  payload: {
+    title,
+  }
+});
+
+export const newPostDialogToggle = (isVisible: boolean) => ({
+  type: NEW_POST_DIALOG_TOGGLE,
+  payload: {
+    isVisible,
+  }
+});
+
+export const newPostBodyChanged = body => ({
+  type: NEW_POST_BODY_CHANGED,
+  payload: {
+    body,
+  }
+});
+
+export const newPostCreate = (post : IPost) => {
+  return {
+    type: NEW_POST_CREATE,
+    payload: {
+      post,
+    }
+  };
+};
 
 export const itemsFetchEpic = (action$, store) => {
   return action$.ofType(itemsFetchPosts().type)

@@ -1,0 +1,80 @@
+$nav-background: #2e2e23;
+$link-color: #fff;
+$link-transition-time: 3s;
+$link-hover: #2e2e2e;
+$transpanent: transparent;
+$white: #fff;
+$input-border-color: #055bfc;
+
+@mixin bullets {
+  color: $white;
+  text-shadow: .625rem 0 $link-hover, -.625rem 0 $link-hover;
+}
+router-outlet::after {
+  content: '';
+  position: relative;
+  display: inline-block;
+  margin: 5.5rem 0 0 0;
+}
+
+.c-app {
+  position: relative;
+  &__nav {
+    position: fixed;
+    padding: 2rem;
+    width: 100vw;
+    background: $nav-background;
+    text-align: center;
+  }
+  &__link {
+    padding: .8rem;
+    position: relative;
+    color: $link-color;
+    text-decoration: none;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 3.25rem;
+      height: 3.25rem;
+      border: .125rem solid rgba(255, 255, 255, .1);
+      border-radius: 50%;
+      content: '';
+      transition: transform .3s, opacity .3s;
+      transform: translateX(-50%) translateY(-50%) scale(.2);
+    }
+
+    &::after {
+      width: 2.625rem;
+      height: 2.625rem;
+      border-width: .375rem;
+      transform: translateX(-50%) translateY(-50%) scale(.8);
+    }
+
+    &:hover, &:focus {
+      &::after, &::before {
+        opacity: 1;
+	      transform: translateX(-50%) translateY(-50%) scale(1);
+      }
+    }
+  }
+  &__header {
+    &--main {
+      font-size: 150%;
+    }
+  }
+  &__input_group {
+    padding: .6rem;
+    display: block;
+  }
+  &__label {
+    display: block;
+  }
+  &__input_text {
+    padding: .6rem;
+    border: none;
+    border-bottom: .06rem solid $input-border-color;
+    font-size: 110%;
+  }
+}
